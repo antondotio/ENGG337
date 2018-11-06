@@ -28,7 +28,7 @@ int main(void)
     
     for(int i = 0; i <2; i++)
         v2.push_back((i + 3) * 7);
-    
+        
     cout << "\nv2 expected to display: 3000 6000 7000 8000 21 28" << endl;
     print(v2);
     

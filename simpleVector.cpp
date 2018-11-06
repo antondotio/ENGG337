@@ -56,8 +56,22 @@ const TYPE& SimpleVector::at(int i)const {
 //     memory space and adds the new value, val, to the end of the current vector
 //     and increments the value of sizeM by 1
 void SimpleVector::push_back(TYPE val) {
-    
-//  THIS FUNCTION MUST BE COMPLETED BY THE STUDENTS
+    TYPE * temp = new TYPE [sizeM];
+    int i;
+    if(sizeM == capacityM && storageM == nullptr){
+        capacityM = 2;
+    }else if(sizeM == capacityM){
+        capacityM = sizeM * 2;
+    }
+    for(i = 0; i < sizeM; i++){
+        temp[i] = storageM[i];
+    }
+    delete [] storageM;
+    storageM = new TYPE [capacityM];
+    for(i = 0 ; i < sizeM; i++)
+        storageM[i] = temp[i];
+    storageM[i] = val;
+    sizeM++;
 }
 
 
@@ -66,7 +80,11 @@ SimpleVector::SimpleVector(const SimpleVector& source) {
     
 }
 
-SimpleVector& SimpleVector::operator= (const SimpleVector& rhs ){
-//  THIS FUNCTION MUST BE COMPLETED BY THE STUDENTS    
+SimpleVector& SimpleVector::operator= (const SimpleVector& rhs ){   
+  /*  if(this != rhs){
+        ~SimpleVector();
+        sizeM = rhs.sizeM;
+
+    }*/
     return *this;
 }
