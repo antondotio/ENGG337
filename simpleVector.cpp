@@ -47,14 +47,6 @@ const TYPE& SimpleVector::at(int i)const {
     return storageM[i];
 }
 
-
-// The followng member function should follow the above-mentioned memory
-// management policy to resize the vector, if necessary. More specifically:
-//   - If sizeM < capacityM it doesn't need to make any changes to the size of
-//     allocated memory for vector
-//   - Otherwise it follows the above-mentioned memory policy to create additionl
-//     memory space and adds the new value, val, to the end of the current vector
-//     and increments the value of sizeM by 1
 void SimpleVector::push_back(TYPE val) {
     TYPE * temp = new TYPE [sizeM];
     int i;
