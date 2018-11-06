@@ -35,7 +35,7 @@ int main(void)
     // When ready to test copying objects, change #if 0 to #if 1. First, try to test
     // your assignment operator by moving the #if 0 to the line before object v4 is
     // is declared.
-#if 0
+
     v2 = v1;
     v1.at(2) = 8000;
     cout << "\nAfter copy v2 is expected to display: 1000 2000 12" << endl;
@@ -43,7 +43,7 @@ int main(void)
     
     cout << "\nv1 is expected to display: 1000 2000 8000" << endl;
     print(v1);
-    
+
     SimpleVector v3 (v2);
     cout << "\nv3 is expected to diplay: 1000 2000 12" << endl;
     v2.at(0) = -333;
@@ -51,7 +51,7 @@ int main(void)
     
     cout << "\nv2 is expected to display: -333 2000 12" << endl;
     print(v2);
-    
+
     SimpleVector v4(v1);
     cout << "\nv4 is expected to diplay: 1000 2000 8000" << endl;
     v1.at(0) = -1000;
@@ -66,7 +66,7 @@ int main(void)
     print(v1);
     cout << "\nv2 after chain-copy is expected to diplay: 1000 2000 12" << endl;
     print(v2);
-#endif
+
     
     return 0;
 }

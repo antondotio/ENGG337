@@ -76,15 +76,26 @@ void SimpleVector::push_back(TYPE val) {
 
 
 SimpleVector::SimpleVector(const SimpleVector& source) {
-//  THIS FUNCTION MUST BE COMPLETED BY THE STUDENTS
+    sizeM = source.sizeM;
+    capacityM  = source.capacityM;
+    storageM = new TYPE [capacityM];
+    assert(storageM != nullptr);
+    for(int i = 0; i < sizeM; i++){
+        storageM[i] = source.storageM[i];
+    }
     
 }
 
 SimpleVector& SimpleVector::operator= (const SimpleVector& rhs ){   
-  /*  if(this != rhs){
-        ~SimpleVector();
+   if(this != &rhs){
+        delete [] storageM;
         sizeM = rhs.sizeM;
-
-    }*/
+        capacityM = rhs.capacityM;
+        storageM = new TYPE [capacityM];
+        assert(storageM != nullptr);
+        for(int i = 0; i < sizeM; i++){
+            storageM[i] = rhs.storageM[i];
+        }
+    }
     return *this;
 }
