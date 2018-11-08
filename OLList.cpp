@@ -83,18 +83,16 @@ void OLList::remove(const ListItem& itemA)
             before = maybe_doomed;
             maybe_doomed = maybe_doomed->next;
         }
+        // point three
     }
-    // point three
-    
-    // the remaining part of this function is missing. As part of exercise B
+    // the remaining part of this function is missing. As part of exercise D
     // students are supposed to complete the rest of the definition of this function.
 }
-
 
 void OLList::destroy()
 {
     
-    // this function is not properly designed. As part of the exercise B
+    // this function is not properly designed. As part of the exercise D
     // For exercise B: students are supposed to remove the folloiwng lines and
     // complete the definition of this helper function.
     cout << "OLList::destroy was called but isn't ready for use"
@@ -104,7 +102,7 @@ void OLList::destroy()
 
 void OLList::copy(const OLList& source)
 {
-    // this function is not properly designed. As part of the exercise B
+    // this function is not properly designed. As part of the exercise D
     // For exercise B: students are supposed to remove the folloiwng lines and
     // complete the definition of this helper function.
     
